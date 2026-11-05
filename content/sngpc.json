@@ -1,0 +1,167 @@
+[
+  {
+    "id": "sngpc-triagem",
+    "title": "Erros SNGPC: por onde começar",
+    "slug": "erros-sngpc-por-onde-comecar",
+    "summary": "Um roteiro de triagem para localizar o XML, registrar o retorno e escolher o procedimento adequado.",
+    "product": "OuroFarma",
+    "category": "SNGPC",
+    "section": "Erros",
+    "tags": ["SNGPC", "XML", "triagem"],
+    "symptoms": "O envio não foi aceito ou o atendimento recebeu apenas uma descrição incompleta da falha.",
+    "cause": "O retorno do arquivo precisa ser identificado antes de escolher uma correção.",
+    "steps": [
+      "Registre a versão do sistema, a loja, o período e a mensagem completa, ocultando dados pessoais nos registros de suporte.",
+      "Localize o arquivo na aba Arquivos XML do Gerenciador de Controlados e consulte seu retorno.",
+      "Pesquise nesta base os termos da mensagem. Abra a fonte oficial correspondente antes de orientar alterações."
+    ],
+    "validation": "O atendimento deve ter um retorno identificável e evidências suficientes para encaminhar o caso ao procedimento correspondente.",
+    "warnings": [
+      "A situação exibida localmente deve ser conferida com o retorno do serviço. Não trate uma mudança manual de situação como comprovação de aceite."
+    ],
+    "sources": [
+      {
+        "title": "VSM — Gerenciador de Controlados",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=1062"
+      },
+      {
+        "title": "VSM — Envio e consulta do XML",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=173"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "sngpc-cpf-rt",
+    "title": "CPF do XML diferente do responsável técnico",
+    "slug": "sngpc-cpf-xml-responsavel-tecnico",
+    "summary": "Confira a identificação do RT quando o CPF do arquivo divergir do usuário associado ao estabelecimento.",
+    "product": "OuroFarma",
+    "category": "SNGPC",
+    "section": "Erros",
+    "tags": ["SNGPC", "CPF", "RT"],
+    "symptoms": "O retorno informa divergência entre o CPF do XML e o usuário do SNGPC.",
+    "cause": "Pode haver uma troca de RT ainda não refletida no cadastro usado para gerar o arquivo.",
+    "steps": [
+      "Com o RT, compare a identificação associada ao estabelecimento com a usada no XML.",
+      "Valide o cadastro antes de gerar novamente o arquivo."
+    ],
+    "validation": "Consulte o resultado do novo envio com o RT.",
+    "warnings": ["Não registre CPF ou senha neste artigo."],
+    "sources": [
+      {
+        "title": "VSM — Erros SNGPC",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=884"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "sngpc-estoque",
+    "title": "Quantidade vendida maior que o estoque no SNGPC",
+    "slug": "sngpc-quantidade-vendida-maior-estoque",
+    "summary": "Compare o registro e o lote do XML com o inventário antes de concluir que há falta de saldo.",
+    "product": "OuroFarma",
+    "category": "SNGPC",
+    "section": "Erros",
+    "tags": ["SNGPC", "estoque", "lote"],
+    "symptoms": "Uma saída é rejeitada por saldo insuficiente no SNGPC.",
+    "cause": "Pode haver divergência no identificador do produto, no lote ou no saldo escriturado.",
+    "steps": [
+      "Confira MS/DCB, lote e quantidade com o RT.",
+      "Compare caracteres semelhantes no lote, como zero e letra O, e diferenças entre maiúsculas e minúsculas."
+    ],
+    "validation": "Reavalie a rejeição após a conferência e a correção aprovada pelo RT.",
+    "warnings": ["Ajustes de inventário exigem análise do RT."],
+    "sources": [
+      {
+        "title": "VSM — Erros SNGPC",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=884"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "sngpc-quarentena",
+    "title": "Conferir um lote de controlado em quarentena",
+    "slug": "sngpc-conferir-lote-quarentena",
+    "summary": "Localize a entrada e encaminhe a conferência do lote para liberar a movimentação no sistema.",
+    "product": "OuroFarma",
+    "category": "SNGPC",
+    "section": "Rotinas",
+    "tags": ["SNGPC", "quarentena", "conferência"],
+    "symptoms": "O lote recém-registrado está em quarentena e o sistema impede sua movimentação.",
+    "cause": "A entrada de um controlado precisa passar pela conferência prevista no Gerenciador de Controlados.",
+    "steps": [
+      "Abra o Gerenciador de Controlados e pesquise o período da entrada.",
+      "Identifique o registro e encaminhe ao farmacêutico a conferência pela opção Conferir Movimentações.",
+      "Confira a situação do lote após concluir o procedimento."
+    ],
+    "validation": "O registro conferido aparece em azul, segundo o tutorial da VSM, e o lote passa a permitir movimentações.",
+    "warnings": [
+      "Use a documentação compatível com a versão instalada. O tutorial consultado informa atualização em 28/07/2025, a partir da versão 3.3.0.0."
+    ],
+    "sources": [
+      {
+        "title": "VSM — Conferência de Controlado",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=674"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "sngpc-retorno-xml",
+    "title": "Consultar o retorno de um XML enviado ao SNGPC",
+    "slug": "sngpc-consultar-retorno-xml",
+    "summary": "Encontre o resultado de processamento do arquivo e diferencie envio de aceite.",
+    "product": "OuroFarma",
+    "category": "SNGPC",
+    "section": "Rotinas",
+    "tags": ["SNGPC", "XML", "retorno", "envio"],
+    "symptoms": "O arquivo foi transmitido, mas ainda é necessário confirmar seu processamento.",
+    "cause": "A transmissão e a validação são etapas distintas; um arquivo enviado pode continuar aguardando retorno.",
+    "steps": [
+      "No Gerenciador de Controlados, abra a aba Arquivos XML.",
+      "Selecione o arquivo e use Consultar Arquivo na Anvisa.",
+      "Registre o retorno. Se houver rejeição, preserve a mensagem completa para a análise."
+    ],
+    "validation": "Confirme a situação retornada pelo serviço e associe qualquer rejeição ao arquivo consultado.",
+    "warnings": [
+      "Alterar manualmente a situação local não substitui a consulta do retorno."
+    ],
+    "sources": [
+      {
+        "title": "VSM — Envio e consulta de movimentações",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=173"
+      }
+    ],
+    "status": "published"
+  },
+  {
+    "id": "sngpc-quantidade-zero",
+    "title": "SNGPC: quantidade igual a zero — validar procedimento",
+    "slug": "sngpc-quantidade-igual-zero",
+    "summary": "Rascunho de um caso do suporte. A causa e a correção ainda precisam de validação antes da publicação.",
+    "product": "OuroFarma",
+    "category": "SNGPC",
+    "section": "Erros",
+    "tags": ["SNGPC", "QUANTIDADE=0", "revisão pendente"],
+    "symptoms": "Relato de quantidade igual a zero em uma movimentação. Mensagem completa ainda não documentada.",
+    "cause": "Pendente de reprodução e confirmação pelo suporte. Não há causa validada neste rascunho.",
+    "steps": [
+      "Anexar ao atendimento a versão, o período, o tipo de movimentação e o trecho anonimizado do retorno.",
+      "Reproduzir e validar o procedimento com o responsável antes de publicar."
+    ],
+    "validation": "Pendente de evidência de reprodução e de correção validada.",
+    "warnings": [
+      "Não executar alterações diretas no banco com base neste rascunho."
+    ],
+    "sources": [
+      {
+        "title": "Contexto — VSM Gerenciador de Controlados (não valida a correção deste caso)",
+        "url": "https://www.vsm.com.br/areadocliente/baseConhecimentoTopico?idTopico=1062"
+      }
+    ],
+    "status": "draft"
+  }
+]

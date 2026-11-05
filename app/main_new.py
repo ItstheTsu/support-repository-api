@@ -1,4 +1,7 @@
-"""FastAPI main application"""
+"""Legacy IncidentSQL application. Not the Base do Suporte entry point."""
+import os
+if os.getenv("LEGACY_INCIDENTSQL_ENABLE") != "1":
+    raise RuntimeError("IncidentSQL legado desativado. Use npm start para a Base do Suporte.")
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
